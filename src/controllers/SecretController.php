@@ -58,7 +58,6 @@ class SecretController {
 
         // Prepare response
         unset($secret['id']); // Remove internal database ID
-        unset($secret['secret_text']); // Prevent exposing the secret text directly
         ResponseHandler::send($secret, 200, $this->getResponseFormat());
     }
 
